@@ -6,16 +6,17 @@ autoscale: true
 
 ---
 
-# [fit] Untangling Platform Complexity with Concourse CI
+# [fit] Untangling Platform Complexity 
+# with Concourse CI
 
 ---
 
-# [fit] Summary
+# Summary
 
-  - Product mindset drives an automation heavy culture
-  - We iterated our way to success
-  - We have created engineering capacity through automation
-  - You can do it too!
+- Product mindset drives an automation heavy culture
+- We iterated our way to success
+- We have created engineering capacity through automation
+- You can do it too!
 
 ---
 
@@ -34,8 +35,6 @@ autoscale: true
       - An integrated platform with connected services that make the right thing the easy thing.
       - Minimize the operational burdon of operating the overall platform.
 
-(https://public-media.interaction-design.org/images/encyclopedia/activity_theory/activity_theory_triangle_engestrom.gif)
-
 ---
 
 # The Starting Point
@@ -48,12 +47,14 @@ autoscale: true
 
 ---
 
-# % of time Upgrading CF
+# Too Much Time Maintaining CF
 
 - Basically 100% of engineering time
   - Tiles broke frequently (Upgrade order matters)
     - e.g. RabbitMQ must be upgraded before mobile push
   - Lack of consistency
+
+---
 
 (Operational Tax Rate was high)
 
@@ -75,22 +76,25 @@ autoscale: true
   - Support the complex workflow of deploying CF
   - Manage all the things
 
+---
+
+![fit original](../common/images/concourse-logo.png)
 
 ---
 
-# [fit] Enter Concourse CI
+Simple gif of new stemcell trigging a deploy of a tile in Dev
+
+- Inputs:
+    * Component -> Tile 
+    * Image -> Stemcell
+    * Configuration -> YAML
+- JOB
+- Outputs
 
 ---
 
-- Simple gif of new stemcell trigging a deploy of a tile in Dev
-    Inputs:
-    - Component -> Tile 
-    - Image -> Stemcell
-    - Configuration -> YAML
-    JOB
-    Outputs
+# Definitions
 
-???
   - Task
   - Resource
   - Pipeline
@@ -101,7 +105,7 @@ autoscale: true
 
 ---
 
-# Attempt number one
+# Attempt Number One
 
 Single pipeline to rule them all (pic)
 
@@ -133,7 +137,7 @@ Single pipeline to rule them all (pic)
 
 ---
 
-# Attempt Number 2
+# Attempt Number Two
 
 - Generate single pipelines per product
     - Ops Manager
@@ -162,9 +166,9 @@ Single pipeline to rule them all (pic)
 
 ---
 
-# Attempt 3
+# Attempt Three
 
-- Wrote a generation tool for Concourse Pipelines
+- Wrote a generation tool for Concourse Pipelines (Travel Agent)
 - Moved to latest open source version of Concourse
 - Fully integrated Pivotal Network resource
 
@@ -179,9 +183,13 @@ Single pipeline to rule them all (pic)
 - We no longer maintain Bash scripts to pull from Pivotal Network
 - Engineering time for a deployment went from 3 hours to 2 hours
 
---
+---
 
-# Results
+# From / To Slide
+
+---
+
+# What we Manage
 
 - 6 Engineers
 - 10 Foundations
@@ -194,11 +202,11 @@ Single pipeline to rule them all (pic)
 
 # Lessons Learned
 
-- Iteration and learning is key and part of the learning curve
+- Iteration and learning is key and part of the journey
 - Start with triggers turned off
-- Don't be afraid to code, be more Dev and less Ops
+- Don't be afraid to code 
 - Focus on removing error from the system
-- Smaller pipelines with a single responsibility are better
+- Smaller pipelines with a single responsibility reduce complexity
   - Faster feedback
   - easier to reason about
 
@@ -206,9 +214,14 @@ Single pipeline to rule them all (pic)
 
 # How to get started
 
-- Awesome Stark and Wayne Tutorial
+- [Awesome Stark and Wayne Tutorial] (https://github.com/starkandwayne/concourse-tutorial)
 - Start with Ops Manager
 - Evolve to BOSH Director
-- Evolve furth to Cloud Foundry
+- Evolve to Cloud Foundry
 - Evolve to the platform
 
+---
+
+# [fit] We
+# [fit] :heart:
+# [fit] Concourse
