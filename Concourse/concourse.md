@@ -33,7 +33,7 @@ autoscale: true
       - Developers expect access to the latest and greatest technolgy for use with their products.
   - Solution
       - An integrated platform with connected services that make the right thing the easy thing.
-      - Minimize the operational burdon of operating the overall platform.
+      - Minimize the operational burdon of running an app on the platform.
 
 ---
 
@@ -60,12 +60,13 @@ autoscale: true
 
 ---
 
-# Our Goal
+# Our Initial Goal
 
   - Reduce the operational burden of running and scaling the platform.
   - No more #@$*^$ GUI's.
   - Be able to reliably and quickly build new environments
   - Ensure that our CF environments look consistent
+  - Have a consitent and reliable way to recover in case of lost failure
 
 ---
 
@@ -73,8 +74,8 @@ autoscale: true
 
   - Environments can be represented and versioned through source control
   - Automated testing for all platform components
-  - Support the complex workflow of deploying CF
-  - Manage all the things
+  - Support the complex workflow of deploying CF and its ecosystem
+
 
 ---
 
@@ -131,8 +132,9 @@ Single pipeline to rule them all (pic)
 
 # Problems
 
-- Concourse pipeline definition file was large and repetitive (2-3K Lines)
+- Concourse pipeline definition file was large, complex and repetitive (2-3K Lines)
 - Managing multiple concurrent versions of Ops Manager was difficult with Bash
+- No official API for Ops Manager
 - Concourse missing proxy support 
 
 ---
@@ -162,6 +164,7 @@ Single pipeline to rule them all (pic)
 # Problems
 
 - Concourse pipeline definitions were repetitive
+- Spending log of time writing boilerplate config/code to create pipelines
 - We had forked Concourse, so we had to merge changes
 
 ---
@@ -209,6 +212,10 @@ Single pipeline to rule them all (pic)
 - Smaller pipelines with a single responsibility reduce complexity
   - Faster feedback
   - easier to reason about
+
+---
+
+# Dont be afraid of change, embrace it and get good at it 
 
 ---
 
