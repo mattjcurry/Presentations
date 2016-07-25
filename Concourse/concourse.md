@@ -11,6 +11,20 @@ autoscale: true
 
 ---
 
+![left 90%](../common/images/alan+matt.png) 
+
+<br><br>
+Matt Curry
+Director of Cloud Engineering
+@mattjcurry
+
+<br><br><br><br><br><br><br>
+Alan Moran
+Cloud Foundry Architect
+@bonzofenix
+
+---
+
 # Summary
 
 - Product mindset drives an automation heavy culture
