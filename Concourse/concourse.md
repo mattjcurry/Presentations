@@ -11,14 +11,14 @@ autoscale: true
 
 ---
 
-![left 90%](../common/images/alan+matt.png) 
+![left 70%](../common/images/alan+matt.png) 
 
 <br><br>
 Matt Curry
 Director of Cloud Engineering
 @mattjcurry
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 Alan Moran
 Cloud Foundry Architect
 @bonzofenix
@@ -70,7 +70,13 @@ Cloud Foundry Architect
 
 ---
 
-(Operational Tax Rate was high)
+![fit] (../common/images/agile_manifesto.png)
+
+---
+
+![left] (../common/images/taxes.jpg)
+
+- Operational Tax Rate was too high, suppressing our ability to innovate.
 
 ---
 
@@ -90,6 +96,11 @@ Cloud Foundry Architect
   - Automated testing for all platform components
   - Support the complex workflow of deploying CF and its ecosystem
 
+
+---
+
+> Releasing software should be easy. It should be easy because you have tested every single part of the release process hundreds of times before. It should be as simple as pressing a button. The repeatability and reliability derive from two principles: automate almost everything, and keep everything you need to build, deploy, test, and release your application in version control.
+-- David Farley, Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
 
 ---
 
@@ -153,6 +164,10 @@ Single pipeline to rule them all (pic)
 
 ---
 
+![fit](../common/images/kata.png)
+
+---
+
 # Attempt Number Two
 
 - Generate single pipelines per product
@@ -162,6 +177,12 @@ Single pipeline to rule them all (pic)
   - Integration Tests for Ops Manager API breaking changes
 - Manage, release and deploy our own fork of concourse
     - Added proxy support
+
+---
+
+> If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster.
+-- Eliyahu M. Goldratt, The Goal
+
 
 ---
 
@@ -246,3 +267,18 @@ Single pipeline to rule them all (pic)
 # [fit] We
 # [fit] :heart:
 # [fit] Concourse
+
+---
+
+![left 30%] (../common/images/deployadactyl.jpeg)
+
+# Announcing Deployadactly
+### An open source for deploying to multiple CF foundations
+
+Deployadactyl is a Go library for deploying applications to multiple Cloud Foundry instances. Deployadactyl utilizes blue green deployments and if it's unable to push your application it will rollback to the previous version. Deployadactyl utilizes Gochannels for concurrent deployments across the multiple Cloud Foundry instances.
+
+[Star us on Github] (https://github.com/compozed/deployadactyl)
+
+---
+
+# [fit] Q&A
