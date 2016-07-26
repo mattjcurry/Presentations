@@ -54,7 +54,8 @@ Cloud Foundry Architect
 # The Starting Point
 
   - ELK
-  - 6 Cloud Foundry Foundations in 3 environments (Need a pic)
+  - 3 full time engineers
+  - 3 Cloud Foundry Foundations in 3 environments (Need a pic)
   - No Production
   - No Automation
   - Several tiles (Mobile push, mySQL, Redis)
@@ -86,7 +87,7 @@ Cloud Foundry Architect
   - No more #@$*^$ GUI's.
   - Be able to reliably and quickly build new environments
   - Ensure that our CF environments look consistent
-  - Have a consitent and reliable way to recover in case of lost failure
+  - Have a consitent and reliable way to recover in case of lost failure ??? Is lost failure the correct term?
 
 ---
 
@@ -107,23 +108,21 @@ Cloud Foundry Architect
 ![fit original](../common/images/concourse-logo.png)
 
 ---
+# Our basic pipeline pattern
 
-Simple gif of new stemcell trigging a deploy of a tile in Dev
-
-- Inputs:
-    * Component -> Tile 
-    * Image -> Stemcell
-    * Configuration -> YAML
-- JOB
-- Outputs
+gif of:
+  Job recibing input
+  job going green
+  showing Software deployed
 
 ---
 
-# Definitions
+# Basic conourse pipeline
 
-  - Task
-  - Resource
-  - Pipeline
+Image of simple pipline with references to the different concourse concepts:
+- resources 
+- jobs
+- task
 
 ---
 
@@ -135,13 +134,13 @@ Simple gif of new stemcell trigging a deploy of a tile in Dev
 
 Single pipeline to rule them all (pic)
 
-- Let concourse manage platform components (concourse resource)
+- Let concourse tasks manage platform components
   * Tiles
   * Ops Manager 
   * Stemcells
-- Let concourse and git manage configurations (concourse resource)
-- Bash to deploy ops manager appliance (concourse tasks)
-- Bash to deploy using experimental ops manager api (concourse tasks)
+- Let concourse git resource manage configurations
+- Concourse bash task to deploy ops manager appliance 
+- Concourse bash task to deploy using experimental ops manager api 
 - Needed to vendor packages into internal artifact repository
 
 ---
@@ -173,7 +172,7 @@ Single pipeline to rule them all (pic)
 - Generate single pipelines per product
     - Ops Manager
     - Tiles: Elastic Runtime, MySQL, Redis
-- Build ruby gem to replace Bash Tasks
+- Build ruby gem to replace Bash Tasks (OpsManagerCli)
   - Integration Tests for Ops Manager API breaking changes
 - Manage, release and deploy our own fork of concourse
     - Added proxy support
@@ -189,17 +188,17 @@ Single pipeline to rule them all (pic)
 # Benefits
 
 - We were able to build only the components that changed
-- Pipeline definitions were smaller and more and responsible for a single component
+- Pipeline definitions were granular and responsible for a single component
 - Fail faster when there were breaking Ops Manager API changes
 - Easier management of multiple versions of Ops Manager API
-- Can pull resources directly from Pivotal Network
+- Can pull dependencies directly from Pivotal Network through concourse tasks
 
 ---
 
 # Problems
 
 - Concourse pipeline definitions were repetitive
-- Spending log of time writing boilerplate config/code to create pipelines
+- Spending lot of time writing boilerplate config/code to create pipelines
 - We had forked Concourse, so we had to merge changes
 
 ---
@@ -208,18 +207,18 @@ Single pipeline to rule them all (pic)
 
 - Wrote a generation tool for Concourse Pipelines (Travel Agent)
 - Moved to latest open source version of Concourse
-- Fully integrated Pivotal Network resource
+- Fully integrated Pivotal Network resource for software dependencies 
 
 ---
 
 # Benefits
 
-- Reuced pipeline definitions from 400 line yaml to a template + 40 line config
+- Reuced pipeline definitions from 400 line yaml to a template + config file 
 - Reduced human error by not repeating ourselves in pipeline definitions
 - Built in validation of generated pipelines
 - We no longer have to maintain a fork of Concourse
 - We no longer maintain Bash scripts to pull from Pivotal Network
-- Engineering time for a deployment went from 3 hours to 2 hours
+- Engineering time for a deployment went from 3 hours to under 2 hours
 
 ---
 
@@ -230,11 +229,12 @@ Single pipeline to rule them all (pic)
 # What we Manage
 
 - 6 Engineers
-- 10 Foundations
-- X Pipelines
 - 2 Datacenters
-- X servers
-- Features we have deployed because we have not been patching
+- 10 Foundations
+- 4 Multi AZ/foundation environments
+- 11 products
+- 15 Pipelines
+- 150 Automated consistent deployments
 
 ---
 
