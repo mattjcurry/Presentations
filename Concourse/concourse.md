@@ -16,11 +16,13 @@ autoscale: true
 <br><br>
 Matt Curry
 Director of Cloud Engineering
+Allstate
 @mattjcurry
 
 <br><br><br><br><br><br><br><br><br><br>
 Alan Moran
 Cloud Foundry Architect
+Allstate
 @bonzofenix
 
 ---
