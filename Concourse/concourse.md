@@ -118,6 +118,8 @@ Image of simple pipline with references to the different concourse concepts:
 
 ---
 
+![original] (../common/images/journey.jpg)
+
 # [fit] The Journey
 
 ---
