@@ -11,7 +11,7 @@ autoscale: true
 
 ---
 
-![left 70%](../common/images/alan+matt.png) 
+![left 80%](../common/images/alan+matt.png) 
 
 <br><br>
 Matt Curry
@@ -19,7 +19,7 @@ Director of Cloud Engineering
 Allstate
 @mattjcurry
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 Alan Moran
 Cloud Foundry Architect
 Allstate
