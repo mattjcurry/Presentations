@@ -72,6 +72,10 @@ Allstate
 
 ---
 
+![fit] (../common/images/tile_dependencies.png)
+
+---
+
 ![fit] (../common/images/agile_manifesto.png)
 
 ---
