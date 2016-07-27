@@ -242,7 +242,7 @@ Single pipeline to rule them all (pic)
 - Focus on removing error from the system
 - Smaller pipelines with a single responsibility reduce complexity
   - Faster feedback
-  - easier to reason about
+  - Easier to reason about
 
 ---
 
