@@ -41,13 +41,12 @@ Cloud Foundry Architect
 # Platform as a Product
 
   - Customer
-      - Developers that need to deploy operable software quickly and reliably without friction. 
+      - Developers 
   - Problem
-      - Developers spend too much time on process heavy lifing and non-business value added work.
-      - Developers expect access to the latest and greatest technolgy for use with their products.
+      - Too much time on non-business value added work
   - Solution
-      - An integrated platform with connected services that make the right thing the easy thing.
-      - Minimize the operational burdon of running an app on the platform.
+      - Connected Platform
+      - Minimize the operational burdon of running apps
 
 ---
 
@@ -81,22 +80,15 @@ Cloud Foundry Architect
 
 ---
 
-# Our Initial Goal
+# Our Initial Goals
 
   - Reduce the operational burden of running and scaling the platform.
-  - No more #@$*^$ GUI's.
-  - Be able to reliably and quickly build new environments
-  - Ensure that our CF environments look consistent
-  - Have a consitent and reliable way to recover in case of lost failure ??? Is lost failure the correct term?
-
----
-
-# Solution Requirements
-
-  - Environments can be represented and versioned through source control
-  - Automated testing for all platform components
-  - Support the complex workflow of deploying CF and its ecosystem
-
+    - Ensure that our CF environments look consistent
+    - Automate testing of platform components
+  - Have a reliable way to recover in case of failure
+    - Ensure environments can be reproduced from source control
+  - Automate Everything
+    - No more #@$*^$ GUI's.
 
 ---
 
@@ -105,7 +97,7 @@ Cloud Foundry Architect
 
 ---
 
-![fit original](../common/images/concourse-logo.png)
+![fit 500%](../common/images/concourse-logo.png)
 
 ---
 # Our basic pipeline pattern
@@ -187,8 +179,8 @@ Single pipeline to rule them all (pic)
 
 # Benefits
 
-- We were able to build only the components that changed
 - Pipeline definitions were granular and responsible for a single component
+- Smaller batches mean we could build only the components that changed
 - Fail faster when there were breaking Ops Manager API changes
 - Easier management of multiple versions of Ops Manager API
 - Can pull dependencies directly from Pivotal Network through concourse tasks
@@ -222,7 +214,9 @@ Single pipeline to rule them all (pic)
 
 ---
 
-# From / To Slide
+# From / To
+
+![inline 100%] (../common/images/innovation_capacity.png) 
 
 ---
 
