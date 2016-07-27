@@ -1,0 +1,28 @@
+---
+jobs:
+- name: Perform Deployment
+  serial: true
+  public: true
+  plan:
+  - get: configurations
+  - get: software
+  - task: some-task
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      run:
+        path: sleep
+        args: [4000]
+
+resources:
+- name: configurations
+  type: time
+  source:
+    interval: 1s
+- name: software
+  type: time
+  source:
+    interval: 1s
+

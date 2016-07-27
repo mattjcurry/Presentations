@@ -1,0 +1,52 @@
+---
+jobs:
+- name: dev
+  serial: true
+  public: true
+  plan:
+  - get: configs
+  - get: stemcell
+  - get: tile
+  - task: some-task
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      run:
+        path: sleep
+        args: [10]
+
+- name: prod
+  serial: true
+  public: true
+  plan:
+  - get: configs
+  - get: stemcell
+    passed: [ dev ]
+  - get: tile
+    passed: [ dev ]
+  - task: some-task
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      run:
+        path: sleep
+        args: [10]
+
+resources:
+
+- name: configs
+  type: time
+  source:
+    interval: 1s
+- name: stemcell
+  type: time
+  source:
+    interval: 1s
+- name: tile
+  type: time
+  source:
+    interval: 1s

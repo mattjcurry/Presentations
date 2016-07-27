@@ -100,21 +100,52 @@ Cloud Foundry Architect
 ![fit 500%](../common/images/concourse-logo.png)
 
 ---
+
 # Our basic pipeline pattern
 
-gif of:
-  Job recibing input
-  job going green
-  showing Software deployed
+![inline fill](../common/images/basic_pattern.png)
 
 ---
 
-# Basic conourse pipeline
+# Our basic pipeline pattern
 
-Image of simple pipline with references to the different concourse concepts:
-- resources 
-- jobs
-- task
+![inline fill](../common/images/basic_pattern_building.gif)
+
+---
+
+# Our basic pipeline pattern
+
+![inline fill](../common/images/basic_pattern_green.png)
+
+---
+
+# Basic concourse pipeline
+
+![inline fill](../common/images/basic_pipeline.png)
+
+---
+
+# Basic concourse pipeline
+
+![inline fill](../common/images/basic_pipeline_dev_building.gif)
+
+---
+
+# Basic concourse pipeline
+
+![inline fill](../common/images/basic_pipeline_dev_green.png)
+
+---
+
+# Basic concourse pipeline
+
+![inline fill](../common/images/basic_pipeline_prod_building.gif)
+
+---
+
+# Basic concourse pipeline
+
+![inline fill](../common/images/basic_pipeline_green.png)
 
 ---
 
@@ -126,7 +157,7 @@ Image of simple pipline with references to the different concourse concepts:
 
 # Attempt Number One
 
-Single pipeline to rule them all (pic)
+Single pipeline to rule them all 
 
 - Let concourse tasks manage platform components
   * Tiles
@@ -136,6 +167,10 @@ Single pipeline to rule them all (pic)
 - Concourse bash task to deploy ops manager appliance 
 - Concourse bash task to deploy using experimental ops manager api 
 - Needed to vendor packages into internal artifact repository
+
+---
+![inline fill](../common/images/attempt1.png)
+
 
 ---
 
@@ -246,7 +281,7 @@ Single pipeline to rule them all (pic)
 
 ---
 
-# Dont be afraid of change, embrace it and get good at it 
+## Dont be afraid of change, embrace it and get good at it 
 
 ---
 
