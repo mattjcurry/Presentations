@@ -54,12 +54,11 @@ Allstate
 
 # The Starting Point
 
-  - ELK
   - 3 full time engineers
-  - 3 Cloud Foundry Foundations in 3 environments (Need a pic)
-  - No Production
-  - No Automation
+  - 3 Cloud Foundry Foundations
   - Several tiles (Mobile push, mySQL, Redis)
+  - No production environment
+  - Manual upgrades of the platform
 
 ---
 
@@ -77,12 +76,6 @@ Allstate
 ---
 
 ![fit] (../common/images/agile_manifesto.png)
-
----
-
-![left] (../common/images/taxes.jpg)
-
-- Operational Tax Rate was too high, suppressing our ability to innovate.
 
 ---
 
@@ -150,19 +143,19 @@ Allstate
 
 ---
 
-# Basic concourse pipeline
+# Multi-environment pipeline
 
 ![inline fill](../common/images/basic_pipeline.png)
 
 ---
 
-# Basic concourse pipeline
+# Multi-environment pipeline
 
 ![inline fill](../common/images/basic_pipeline_dev_building.gif)
 
 ---
 
-# Basic concourse pipeline
+# Multi-environment pipeline
 
 ![inline fill](../common/images/basic_pipeline_dev_green.png)
 
@@ -274,11 +267,11 @@ Allstate
 # Benefits
 
 - Reuced pipeline definitions from 400 line yaml to a template + config file 
-- Reduced human error by not repeating ourselves in pipeline definitions
+- Reduced human error by reducing repetition in pipeline definitions
 - Built in validation of generated pipelines
 - We no longer have to maintain a fork of Concourse
 - We no longer maintain Bash scripts to pull from Pivotal Network
-- Engineering time for a deployment went from 3 hours to under 2 hours
+- Engineering time for a new deployment went from 3 hours to under 2 hours
 
 ---
 
@@ -293,8 +286,7 @@ Allstate
 - 6 Engineers
 - 2 Datacenters
 - 10 Foundations
-- 4 Multi foundation environments
-- 11 products
+- 11 Products
 - 15 Pipelines
 - 150 Automated consistent deployments
 
