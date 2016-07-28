@@ -155,6 +155,30 @@ Allstate
 
 ---
 
+![left filtered](../common/images/resources.png)
+
+## Concourse resources
+> any entity that can be checked for new versions, pulled down at a specific version, and/or pushed up to idempotently create new versions 
+-- concourse.ci
+
+---
+
+![left filtered](../common/images/jobs.png)
+
+## Concourse jobs
+> Some actions to perform when dependent resources change (or when manually triggered)
+-- concourse.ci
+
+---
+
+![left filtered](../common/images/tasks.png)
+
+## Concourse tasks
+> the execution of a script in an isolated environment with dependent resources available to it
+-- concourse.ci
+
+---
+
 ![original] (../common/images/journey.jpg)
 
 # [fit] The Journey

@@ -26,7 +26,7 @@ jobs:
     passed: [ dev ]
   - get: tile
     passed: [ dev ]
-  - task: some-task
+  - task: task1
     config:
       platform: linux
       image_resource:
@@ -35,6 +35,16 @@ jobs:
       run:
         path: sleep
         args: [10]
+  - task: task2
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      run:
+        path: echo
+        args: [ hello concourse ]
+
 
 resources:
 
