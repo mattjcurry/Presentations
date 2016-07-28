@@ -107,19 +107,44 @@ Allstate
 
 ---
 
-# Our basic pipeline pattern
+![left](../common/images/resources.png)
+
+## Concourse resources
+> any entity that can be checked for new versions, pulled down at a specific version, and/or pushed up to idempotently create new versions 
+-- concourse.ci
+
+---
+
+![left](../common/images/tasks.png)
+
+## Concourse tasks
+> the execution of a script in an isolated environment with dependent resources available to it
+-- concourse.ci
+
+---
+
+![left](../common/images/jobs.png)
+
+## Concourse jobs
+> Some actions to perform when dependent resources change (or when manually triggered)
+-- concourse.ci
+
+
+---
+
+# Basic pipeline pattern
 
 ![inline fill](../common/images/basic_pattern.png)
 
 ---
 
-# Our basic pipeline pattern
+# Basic pipeline pattern
 
 ![inline fill](../common/images/basic_pattern_building.gif)
 
 ---
 
-# Our basic pipeline pattern
+# Basic pipeline pattern
 
 ![inline fill](../common/images/basic_pattern_green.png)
 
@@ -155,30 +180,6 @@ Allstate
 
 ---
 
-![left filtered](../common/images/resources.png)
-
-## Concourse resources
-> any entity that can be checked for new versions, pulled down at a specific version, and/or pushed up to idempotently create new versions 
--- concourse.ci
-
----
-
-![left filtered](../common/images/jobs.png)
-
-## Concourse jobs
-> Some actions to perform when dependent resources change (or when manually triggered)
--- concourse.ci
-
----
-
-![left filtered](../common/images/tasks.png)
-
-## Concourse tasks
-> the execution of a script in an isolated environment with dependent resources available to it
--- concourse.ci
-
----
-
 ![original] (../common/images/journey.jpg)
 
 # [fit] The Journey
@@ -187,7 +188,7 @@ Allstate
 
 # Attempt Number One
 
-Single pipeline to rule them all 
+## Single pipeline to rule them all 
 
 - Let concourse tasks manage platform components
   * Tiles
@@ -199,8 +200,8 @@ Single pipeline to rule them all
 - Needed to vendor packages into internal artifact repository
 
 ---
-![inline fill](../common/images/attempt1.png)
 
+![inline fill](../common/images/attempt1.png)
 
 ---
 
@@ -292,7 +293,7 @@ Single pipeline to rule them all
 - 6 Engineers
 - 2 Datacenters
 - 10 Foundations
-- 4 Multi AZ/foundation environments
+- 4 Multi foundation environments
 - 11 products
 - 15 Pipelines
 - 150 Automated consistent deployments
