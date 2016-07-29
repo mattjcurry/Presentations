@@ -179,7 +179,7 @@ Allstate
 
 ---
 
-# Attempt Number One
+# Iteration Number One
 
 ## Single pipeline to rule them all 
 
@@ -207,7 +207,7 @@ Allstate
 
 ---
 
-# Problems
+# Opportunities
 
 - Concourse pipeline definition file was large, complex and repetitive (2-3K Lines)
 - Managing multiple concurrent versions of Ops Manager was difficult with Bash
@@ -220,7 +220,7 @@ Allstate
 
 ---
 
-# Attempt Number Two
+# Iteration Number Two
 
 - Generate single pipelines per product
     - Ops Manager
@@ -248,7 +248,7 @@ Allstate
 
 ---
 
-# Problems
+# Opportunities
 
 - Concourse pipeline definitions were repetitive
 - Spending lot of time writing boilerplate config/code to create pipelines
@@ -256,7 +256,7 @@ Allstate
 
 ---
 
-# Attempt Three
+# Iteration Three
 
 - Wrote a generation tool for Concourse Pipelines (Travel Agent)
 - Moved to latest open source version of Concourse
