@@ -198,6 +198,8 @@ Allstate
 
 ---
 
+![filtered](../common/images/frankenstein.png)
+
 # Benefits
 
 - Codified tile dependencies
@@ -212,7 +214,7 @@ Allstate
 - Concourse pipeline definition file was large, complex and repetitive (2-3K Lines)
 - Managing multiple concurrent versions of Ops Manager was difficult with Bash
 - No official API for Ops Manager
-- Concourse missing proxy support 
+- Vendoring dependencies
 
 ---
 
