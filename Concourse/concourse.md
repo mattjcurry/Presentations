@@ -187,10 +187,10 @@ Allstate
   * Tiles
   * Ops Manager 
   * Stemcells
+- Neeeded to vendor components intoo internal artifact repository
 - Let concourse git resource manage configurations
 - Concourse bash task to deploy ops manager appliance 
 - Concourse bash task to deploy using experimental ops manager api 
-- Needed to vendor packages into internal artifact repository
 
 ---
 
