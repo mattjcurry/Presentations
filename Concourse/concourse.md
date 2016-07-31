@@ -108,18 +108,18 @@ Allstate
 
 ---
 
-![left](../common/images/tasks.png)
-
-## Concourse tasks
-> the execution of a script in an isolated environment with dependent resources available to it
--- concourse.ci
-
----
-
 ![left](../common/images/jobs.png)
 
 ## Concourse jobs
 > Some actions to perform when dependent resources change (or when manually triggered)
+-- concourse.ci
+
+---
+
+![left](../common/images/tasks.png)
+
+## Concourse tasks
+> the execution of a script in an isolated environment with dependent resources available to it
 -- concourse.ci
 
 
@@ -161,13 +161,13 @@ Allstate
 
 ---
 
-# Basic concourse pipeline
+# Multi-environment pipeline
 
 ![inline fill](../common/images/basic_pipeline_prod_building.gif)
 
 ---
 
-# Basic concourse pipeline
+# Multi-environment pipeline
 
 ![inline fill](../common/images/basic_pipeline_green.png)
 
@@ -179,20 +179,21 @@ Allstate
 
 ---
 
-# Iteration Number One
+## First Iteration
 
-## Single pipeline to rule them all 
 
-- Let concourse tasks manage platform components
+- Concourse tasks instead of resources to manage:
   * Tiles
-  * Ops Manager 
+  * Ops Manager
   * Stemcells
-- Neeeded to vendor components intoo internal artifact repository
+- Needed to vendor components into internal artifact repository
 - Let concourse git resource manage configurations
 - Concourse bash task to deploy ops manager appliance 
 - Concourse bash task to deploy using experimental ops manager api 
 
 ---
+
+### Single pipeline to rule them all 
 
 ![inline fill](../common/images/attempt1.png)
 
