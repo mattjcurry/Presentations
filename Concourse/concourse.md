@@ -83,7 +83,7 @@ Allstate
 
   - Reduce the operational burden of running and scaling the platform.
     - Ensure that our CF environments look consistent
-    - Automate testing of platform components
+    - Automate testing of platform products
   - Have a reliable way to recover in case of failure
     - Ensure environments can be reproduced from source control
   - Automate Everything
@@ -96,10 +96,6 @@ Allstate
 
 ---
 
-![fit 500%](../common/images/concourse-logo.png)
-
----
-
 ![inline ](../common/images/products/opsman.png) ![inline 75%](../common/images/products/bosh.png) ![inline](../common/images/products/pcf.png)
 ![inline](../common/images/products/push_notifications.png) ![inline 85%](../common/images/products/nfs.jpg)![inline](../common/images/products/rabbitmq.png)
  ![inline](../common/images/products/jenkins.png) ![inline 99%](../common/images/products/concourse.png) ![inline](../common/images/products/jmx.png)
@@ -108,10 +104,14 @@ Allstate
 
 ---
 
+![fit 500%](../common/images/concourse-logo.png)
+
+---
+
 ![left](../common/images/resources.png)
 
 ## Concourse resources
-> any entity that can be checked for new versions, pulled down at a specific version, and/or pushed up to idempotently create new versions 
+> any entity that can be checked for new versions, pulled down at a specific version, *and/or* pushed up to idempotently create new versions 
 -- concourse.ci
 
 ---
@@ -194,10 +194,10 @@ Allstate
   * Tiles
   * Ops Manager
   * Stemcells
-- Needed to vendor components into internal artifact repository
+- vendor products dependencies into internal artifact repository
 - Let concourse git resource manage configurations
-- Concourse bash task to deploy ops manager appliance 
-- Concourse bash task to deploy using experimental ops manager api 
+- Deploy ops manager appliance with concourse bask task
+- Deploy PCF tiles though concourse bask tasks using experimental ops manager api 
 
 ---
 
@@ -225,36 +225,36 @@ Allstate
 - No official API for Ops Manager
 - Vendoring dependencies
 
+<!-- --- -->
+
+<!-- ![fit](../common/images/kata.png) -->
+
 ---
 
-![fit](../common/images/kata.png)
-
----
-
-# Iteration Number Two
+# Second Iteration
 
 - Generate single pipelines per product
     - Ops Manager
     - Tiles: Elastic Runtime, MySQL, Redis
-- Build ruby gem to replace Bash Tasks (OpsManagerCli)
-  - Integration Tests for Ops Manager API breaking changes
 - Manage, release and deploy our own fork of concourse
     - Added proxy support
+- Build command line application for Ops Manager
+  - Integration Tests for Ops Manager API breaking changes
 
----
+<!-- --- -->
 
-> If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster.
--- Eliyahu M. Goldratt, The Goal
+<!-- > If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster. -->
+<!-- -- Eliyahu M. Goldratt, The Goal -->
 
 
 ---
 
 # Benefits
 
-- Pipeline definitions were granular and responsible for a single component
-- Smaller batches mean we could build only the components that changed
+- Pipeline definitions were granular and responsible for a single product
+- Smaller batches mean we could build only the product that changed
 - Fail faster when there were breaking Ops Manager API changes
-- Easier management of multiple versions of Ops Manager API
+ iteratting- Easier management of multiple versions of Ops Manager API
 - Can pull dependencies directly from Pivotal Network through concourse tasks
 
 ---
@@ -262,12 +262,12 @@ Allstate
 # Opportunities
 
 - Concourse pipeline definitions were repetitive
-- Spending lot of time writing boilerplate config/code to create pipelines
+  - Spending lot of time writing boilerplate manifests to create pipelines
 - We had forked Concourse, so we had to merge changes
 
 ---
 
-# Iteration Three
+# Third Iteration
 
 - Wrote a generation tool for Concourse Pipelines (Travel Agent)
 - Moved to latest open source version of Concourse
@@ -278,8 +278,8 @@ Allstate
 # Benefits
 
 - Reuced pipeline definitions from 400 line yaml to a template + config file 
-- Reduced human error by reducing repetition in pipeline definitions
 - Built in validation of generated pipelines
+- Reduced human error by reducing repetition in pipeline definitions
 - We no longer have to maintain a fork of Concourse
 - We no longer maintain Bash scripts to pull from Pivotal Network
 - Engineering time for a new deployment went from 3 hours to under 2 hours
