@@ -203,7 +203,7 @@ Allstate
 
 ### Single pipeline to rule them all 
 
-![inline fill](../common/images/attempt1.png)
+![inline fill](../common/images/first_iteration.png)
 
 ---
 
@@ -246,6 +246,9 @@ Allstate
 <!-- > If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster. -->
 <!-- -- Eliyahu M. Goldratt, The Goal -->
 
+---
+
+![inline fill](../common/images/second_iteration.png)
 
 ---
 
@@ -274,6 +277,7 @@ Allstate
 - Fully integrated Pivotal Network resource for software dependencies 
 
 ---
+
 
 # Benefits
 
