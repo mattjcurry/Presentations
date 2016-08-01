@@ -195,9 +195,9 @@ Allstate
   * Ops Manager
   * Stemcells
 - vendor products dependencies into internal artifact repository
-- Let concourse git resource manage configurations
-- Deploy ops manager appliance with concourse bask task
-- Deploy PCF tiles though concourse bask tasks using experimental ops manager api 
+- Let Concourse git resource manage configurations
+- Deploy ops manager appliance with Concourse Bash task
+- Deploy PCF tiles though Concourse Bash tasks using experimental ops manager api 
 
 ---
 
@@ -207,16 +207,17 @@ Allstate
 
 ---
 
-![filtered](../common/images/frankenstein.png)
 
 # Benefits
 
 - Codified tile dependencies
 - Each environment was perfectly consistent
-- New environment provisioning went from 1 week to 8 hours
-- Engineering time for a deployment went from 40 hours to 3 hours
+- New environment provisioning went from 1 week to 18 hours
+- Engineering time for a deployment went from 40 hours to 4 hours
 
 ---
+
+![left](../common/images/frankenstein.png)
 
 # Opportunities
 
@@ -236,15 +237,15 @@ Allstate
 - Generate single pipelines per product
     - Ops Manager
     - Tiles: Elastic Runtime, MySQL, Redis
-- Manage, release and deploy our own fork of concourse
+- Manage, release and deploy our own fork of Concourse
     - Added proxy support
 - Build command line application for Ops Manager
   - Integration Tests for Ops Manager API breaking changes
 
-<!-- --- -->
+---
 
-<!-- > If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster. -->
-<!-- -- Eliyahu M. Goldratt, The Goal -->
+> If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster.
+-- Eliyahu M. Goldratt, The Goal
 
 ---
 
@@ -257,8 +258,8 @@ Allstate
 - Pipeline definitions were granular and responsible for a single product
 - Smaller batches mean we could build only the product that changed
 - Fail faster when there were breaking Ops Manager API changes
- iteratting- Easier management of multiple versions of Ops Manager API
-- Can pull dependencies directly from Pivotal Network through concourse tasks
+- Easier management of multiple versions of Ops Manager API
+- Can pull dependencies directly from Pivotal Network through Concourse tasks
 
 ---
 
