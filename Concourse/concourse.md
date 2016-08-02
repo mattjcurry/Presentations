@@ -2,12 +2,15 @@ footer: © Matt Curry & Alan Moran, 2016
 slidenumbers: true
 autoscale: true 
 
-![fit] (../common/images/cl_wallpaper9.jpg)
+![fit original] (../common/images/cl_wallpaper9.jpg)
 
----
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
-# [fit] Untangling Platform Complexity 
-# with Concourse CI
+# [fit] Untangling Platform Complexity
+# [fit] with Concourse CI
 
 ---
 
@@ -59,19 +62,6 @@ Allstate
   - Several tiles (Mobile push, mySQL, Redis)
   - No production environment
   - Manual upgrades of the platform
-
----
-
-# Too Much Time Maintaining CF
-
-- Basically 100% of engineering time
-  - Tiles broke frequently (Upgrade order matters)
-    - e.g. RabbitMQ must be upgraded before mobile push
-  - Lack of consistency
-
----
-
-![fit] (../common/images/tile_dependencies.png)
 
 ---
 
@@ -193,19 +183,12 @@ Allstate
   * Tiles
   * Ops Manager
   * Stemcells
-- vendor products dependencies into internal artifact repository
+- Vendor products dependencies into internal artifact repository
 - Let Concourse git resource manage configurations
 - Deploy ops manager appliance with Concourse Bash task
 - Deploy PCF tiles though Concourse Bash tasks using experimental ops manager API
 
 ---
-
-### Single pipeline to rule them all 
-
-![inline fill](../common/images/first_iteration.png)
-
----
-
 
 # Benefits
 
@@ -215,6 +198,13 @@ Allstate
 - Engineering time for a deployment went from 40 hours to 4 hours
 
 ---
+
+### Single pipeline to rule them all 
+
+![inline fill](../common/images/first_iteration.png)
+
+---
+
 
 ![left](../common/images/frankenstein.png)
 
