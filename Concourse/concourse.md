@@ -55,6 +55,8 @@ Allstate
 
 ---
 
+![fit] (../common/images/whackamole.jpg)
+
 # The Starting Point
 
   - 3 full time engineers
@@ -80,6 +82,8 @@ Allstate
     - No more #@$*^$ GUI's.
 
 ---
+
+![right] (../common/images/continuous_delivery_cover.jpg)
 
 > Releasing software should be easy. It should be easy because you have tested every single part of the release process hundreds of times before. It should be as simple as pressing a button. The repeatability and reliability derive from two principles: automate almost everything, and keep everything you need to build, deploy, test, and release your application in version control.
 -- David Farley, Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation
@@ -199,9 +203,7 @@ Allstate
 
 ---
 
-### Single pipeline to rule them all 
-
-![inline fill](../common/images/first_iteration.png)
+![fit](../common/images/platform_pipeline.png)
 
 ---
 
