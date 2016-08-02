@@ -39,6 +39,8 @@ Allstate
 
 ---
 
+![] (../common/images/collaboration.jpg)
+
 # [fit] Culture
 
 ---
