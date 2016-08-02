@@ -48,7 +48,7 @@ Allstate
       - Too much time on non-business value added work
   - Solution
       - Connected Platform
-      - Minimize the operational burdon of running apps
+      - Minimize the operational burden of running apps
 
 ---
 
@@ -189,7 +189,6 @@ Allstate
 
 ## First Iteration
 
-
 - Concourse tasks instead of resources to manage:
   * Tiles
   * Ops Manager
@@ -197,7 +196,7 @@ Allstate
 - vendor products dependencies into internal artifact repository
 - Let Concourse git resource manage configurations
 - Deploy ops manager appliance with Concourse Bash task
-- Deploy PCF tiles though Concourse Bash tasks using experimental ops manager api 
+- Deploy PCF tiles though Concourse Bash tasks using experimental ops manager API
 
 ---
 
@@ -244,11 +243,6 @@ Allstate
 
 ---
 
-> If we reduce batch sizes by half, we also reduce by half the time it will take to process a batch. That means we reduce queue and wait by half as well. Reduce those by half, and we reduce by about half the total time parts spend in the plant. Reduce the time parts spend in the plant and our total lead time condenses. And with faster turn-around on orders, customers get their orders faster.
--- Eliyahu M. Goldratt, The Goal
-
----
-
 ![inline fill](../common/images/second_iteration.png)
 
 ---
@@ -256,8 +250,6 @@ Allstate
 # Benefits
 
 - Pipeline definitions were granular and responsible for a single product
-- Smaller batches mean we could build only the product that changed
-- Fail faster when there were breaking Ops Manager API changes
 - Easier management of multiple versions of Ops Manager API
 - Can pull dependencies directly from Pivotal Network through Concourse tasks
 
@@ -282,20 +274,14 @@ Allstate
 
 # Benefits
 
-- Reuced pipeline definitions from 400 line yaml to a template + config file 
+- Reduced pipeline definitions from 400 line YAML to a template + config file 
 - Built in validation of generated pipelines
 - Reduced human error by reducing repetition in pipeline definitions
 - We no longer have to maintain a fork of Concourse
 - We no longer maintain Bash scripts to pull from Pivotal Network
 - Engineering time for a new deployment went from 3 hours to under 2 hours
 
----
-
-# From / To
-
-![inline 100%] (../common/images/innovation_capacity.png) 
-
----
+--- 
 
 # What we Manage
 
@@ -305,6 +291,18 @@ Allstate
 - 11 Products
 - 15 Pipelines
 - 150 Automated consistent deployments
+
+---
+
+# From / To
+
+![inline 100%] (../common/images/innovation_capacity.png) 
+
+---
+
+# Unleash the Freedom
+
+![fit inline] (../common/images/concourse_results.png)
 
 ---
 
@@ -320,7 +318,7 @@ Allstate
 
 ---
 
-## Dont be afraid of change, embrace it and get good at it 
+## Don't be afraid of change, embrace it and get good at it 
 
 ---
 
