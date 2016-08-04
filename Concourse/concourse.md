@@ -192,7 +192,7 @@ Allstate
 - Vendor products dependencies into internal artifact repository
 - Let Concourse git resource manage configurations
 - Deploy ops manager appliance with Concourse Bash task
-- Deploy PCF tiles though Concourse Bash tasks using experimental ops manager API
+- Deploy PCF tiles though Concourse Bash tasks using ops manager API
 
 ---
 
