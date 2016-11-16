@@ -34,7 +34,7 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 
 ![fit original] (../common/images/disaster_girl.jpg)
 
-# [fit] Who Owns Your Availability?
+# Who Owns Your Availability?
 
 ---
 
@@ -56,6 +56,13 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 
 ---
 
+![fit original] (../common/images/trump-pointing.jpg)
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 # [fit] You still own your availability
 
 ---
@@ -63,6 +70,14 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 # [fit] But an Oracle/IBM/HP/Vendor Bug
 
 ---
+
+![fit original] (../common/images/mr-t-pointing.jpg)
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 
 # [fit] You and only you own your availability
 
@@ -305,7 +320,7 @@ $$x = 97.8\%$$
 
 ![left 30%] (../common/images/deployadactyl.jpeg)
 
-# Announcing Deployadactly
+# Announcing Deployadactyl
 ### An open source for deploying to multiple CF foundations
 
 Deployadactyl is a Go library for deploying applications to multiple Cloud Foundry instances. Deployadactyl utilizes blue green deployments and if it's unable to push your application it will rollback to the previous version. Deployadactyl utilizes Gochannels for concurrent deployments across the multiple Cloud Foundry instances.
