@@ -38,6 +38,8 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 
 ---
 
+![left] (../common/images/uncle_sam.jpg)
+
 # [fit] YOU DO!
 
 ---
@@ -126,6 +128,27 @@ usual reaction is to grow the operations team.
 
 ---
 
+![left](../common/images/billy_joel.jpg)
+
+# Billy Joel
+## Song Writer
+
+[We Didn't Start the Fire] (https://play.google.com/music/preview/Tco7uco7jqcs3tm4zebdwxm46ea?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics)
+
+> We didn't start the fire
+No, we didn't light it, but we tried to fight it
+
+---
+
+![fit original] (../common/images/tirefire.jpg)
+
+# Availability Zone Limitations on PCF
+
+- With Vsphere, you cannot have more than one Vcenter per CF Install
+- You must have shared storage across all VMWare clusters.
+
+---
+
 # [fit] Core 4 Principles of Availability
 - **Isolation** - Bulkhead - Shared nothing processing.
 - **Data Locality** - Return requests to original zone where possible.
@@ -157,7 +180,7 @@ Bonus: Fail open / circuit breaker for centralized services.
 # Isolation Benefits:
 
 - Decouples service restoration from fixing root cause.
-- provides silos for testing that impact a subset of traffic.
+- Provides silos for testing that impact a subset of traffic.
 - Humans can only impact 1/n of traffic.
 - Maintinence can be typically done without downtime.
 - Keeps complexity out of infrastructure by keeping clean separation of processing units.
@@ -166,15 +189,16 @@ Bonus: Fail open / circuit breaker for centralized services.
 
 # A little Math
 
-4 9's infrastructure is almost impossible to achieve
+4 9's infrastructure is almost impossible to achieve with a single fault domain.
 
-Benefit of Isolaion
+Required Availability of each zone if you have 2
 
 $$.00001 = x^2$$
 
 $$x = 99.7\%$$
 
 <br><br>
+Required Availability of each zone if you have 3
 
 $$.00001 = x^3$$
 
@@ -182,7 +206,7 @@ $$x = 97.8\%$$
 
 ---
 
-AWS availability zones as an implementation pattern.  Might be good to also cover latency boundaries here.
+![fit original] (../common/images/CF_AWS_AZ.png)
 
 ---
 
@@ -193,14 +217,18 @@ AWS availability zones as an implementation pattern.  Might be good to also cove
 - Benefits:
     - Cache warming
     - Local Data acccess
-    - Avoiding split brain
     - Reduce odds of replication delay as a failure mode
 
 ---
 
-# Implementing Stickiness with GTM
+![](../common/images/glue.jpg)
 
-I would like to have an image her showing a request passing through a processing zone with eventually consistent replication across zones.
+# Stickiness
+
+---
+
+![fit original] (../common/images/CF_Stickiness.png)
+
 
 ---
 
