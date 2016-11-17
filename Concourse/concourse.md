@@ -1,6 +1,7 @@
 footer: © Matt Curry & Alan Moran, 2016
 slidenumbers: true
 autoscale: true 
+theme: Next, 9
 
 ![fit original] (../common/images/cl_wallpaper9.jpg)
 
