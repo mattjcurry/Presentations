@@ -1,6 +1,7 @@
 autoscale: true
 footer: © Matt Curry, 2016
 slidenumbers: true
+theme: Letters from Sweden, 1
 
 ![fit] (../common/images/this_is_fine.jpg)
 
@@ -183,7 +184,7 @@ Bonus: Fail open / circuit breaker for centralized services.
 # Bulkheads
 
 - How the application maps on to physical infrastructure matters.
-- Fault isolation should include fire supression systems and power facilities.
+- Fault isolation should include fire suppression systems and power facilities.
 - How applications map onto bare metal matters.
 - We will refer to the bulkheads as processing zones.
 - Running processing zones in an active/active pattern constantly validates that they can take traffic.
@@ -197,7 +198,7 @@ Bonus: Fail open / circuit breaker for centralized services.
 - Decouples service restoration from fixing root cause.
 - Provides silos for testing that impact a subset of traffic.
 - Humans can only impact 1/n of traffic.
-- Maintinence can be typically done without downtime.
+- Maintenance can be typically done without downtime.
 - Keeps complexity out of infrastructure by keeping clean separation of processing units.
 
 ---
@@ -227,11 +228,11 @@ $$x = 97.8\%$$
 
 # Data Locality
 
-- Session affinity is bad in that a request fails if it does not go back to the same datacenter.
-- However, preference to the same datacenter should be given where possible.
+- Session affinity is bad in that a request fails if it does not go back to the same data center.
+- However, preference to the same data center should be given where possible.
 - Benefits:
     - Cache warming
-    - Local Data acccess
+    - Local Data access
     - Reduce odds of replication delay as a failure mode
 
 ---
@@ -270,7 +271,7 @@ $$x = 97.8\%$$
 
 ---
 
-# Evironmental consistency
+# Environmental consistency
 
 - Test environments should look like production.
     - Firewalls
