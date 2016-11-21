@@ -10,6 +10,17 @@ theme: Letters from Sweden, 1
 
 ---
 
+![left](../common/images/mattjcurry1.jpg)
+#Me
+
+Matt Curry 
+Allstate / PayPal
+
+[@mattjcurry](http://twitter.com/mattjcurry)
+[mcurry@splittechnologies.com](mailto:mcurry@spittechnologies.com)
+
+---
+
 # Availability
 
 In reliability theory and reliability engineering, the term availability has the following meanings: The degree to which a system, subsystem or equipment is in a specified operable and committable state at the start of a mission, when the mission is called for at an unknown, i.e. a random, time.
@@ -94,12 +105,12 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 
 ---
 
-# Now that we have got the point across.
+# Now that we have got the point across
 
 ---
 
 # The failed promise of ITIL 
-## Operational frameworks won't help you engineer better systems.
+## Operational frameworks won't help you engineer better systems
 
 - X% of outages are caused my change is not an actionable metric.
 - Human Error is not a legitimate root cause because it does not address the problem that humans should not be able to make an entire system fail.
@@ -216,7 +227,7 @@ Bonus: Fail open / circuit breaker for centralized services.
 
 ---
 
-# Isolation Benefits:
+# Isolation Benefits
 
 - Decouples service restoration from fixing root cause.
 - Provides silos for testing that impact a subset of traffic.
