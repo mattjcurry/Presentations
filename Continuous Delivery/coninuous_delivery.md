@@ -174,7 +174,7 @@ of valuable software.[^4]
 
 ---
 
-#Value Steam Mapping
+#Value Stream Mapping
 
 - Adopted from lean manufacturing
 - It is about value to the customer not value to me.

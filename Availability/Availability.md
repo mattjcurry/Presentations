@@ -14,6 +14,10 @@ theme: Letters from Sweden, 1
 
 In reliability theory and reliability engineering, the term availability has the following meanings: The degree to which a system, subsystem or equipment is in a specified operable and committable state at the start of a mission, when the mission is called for at an unknown, i.e. a random, time.
 
+^ At the end of the day Availability means that he customer can do what they want to do.
+
+^Customers expect no maintinence windows.  Maintinence windows are outages.
+
 ---
 
 # Ops vs Dev
@@ -30,6 +34,8 @@ In reliability theory and reliability engineering, the term availability has the
 #SLA's
 
 Your customer does not give a crap about your SLA's.  They care if they can access your service or not when they need it.
+
+^ Why do we keep giving offering availability as a cost lever.  Of course the development org is going to choose the cheapest option, and then you butt is going to end up on a call when that thing goes up in flames.
 
 ---
 
@@ -48,6 +54,8 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 # [fit] But a dependency failed!
 
 ---
+
+![right original] (../common/images/freshprince-pointing.jpg)
 
 # [fit] You own your availability
 
@@ -69,6 +77,8 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 ---
 
 # [fit] But an Oracle/IBM/HP/Vendor Bug
+
+^ Talk about the 248 day bug.
 
 ---
 
@@ -99,6 +109,10 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
     - Did not go through CAB
 - ITIL mostly improves availability by slowing change velocity to a crawl.
 
+^ ITIL give you a false sense of security by slowing your change velocity to a haul.  ITIL is snake oil and the same people who sold you this garbage are now selling you Lean and DevOps.
+
+^ Our goal is not to optimize the human so that they don't make errors.  Our goal is to optimize the system so that human errors don't impact the customer.
+
 ---
 
 ![right] (../common/images/ghost_rider.jpg)
@@ -107,7 +121,7 @@ Your customer does not give a crap about your SLA's.  They care if they can acce
 # Something Different
 
 - Expect Failures [^1]
-- Keep things simple [^1]
+- Keep Things Simple [^1]
 - Automate Everything [^1]
 
 [^1]: [On Designing and Deploying Internet-Scale Services, James Hamilton] (https://www.usenix.org/legacy/event/lisa07/tech/full_papers/hamilton/hamilton_html/)
@@ -133,6 +147,8 @@ usual reaction is to grow the operations team.
 
 -- James Hamilton
 
+^ The software developers must feel the pain of the outage.
+
 ---
 
 ![left](../common/images/jeff_dean.jpg)
@@ -147,12 +163,14 @@ usual reaction is to grow the operations team.
 ![left](../common/images/billy_joel.jpg)
 
 # Billy Joel
-## Song Writer
+## Song Writer and SRE at Heart
 
 [We Didn't Start the Fire] (https://play.google.com/music/preview/Tco7uco7jqcs3tm4zebdwxm46ea?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics)
 
 > We didn't start the fire
 No, we didn't light it, but we tried to fight it
+
+^ Everyone thinks that we are protecting the system from component failure.  We aren't.  We are protecting it from bad code and from borked infrastructure changes.
 
 ---
 
@@ -162,6 +180,11 @@ No, we didn't light it, but we tried to fight it
 
 - With Vsphere, you cannot have more than one Vcenter per CF Install
 - You must have shared storage across all VMWare clusters.
+
+Shared nothing infrastructure is key to a successful availabilty strategy.
+    - a replicaton stream is a failure domain
+    - shared storage is a failure domain
+    - layer 2 networks are a failure domain
 
 ---
 
@@ -177,7 +200,7 @@ Bonus: Fail open / circuit breaker for centralized services.
 
 ![fit] (../common/images/bulkhead.jpg)
 
-# Bulkhead
+# Isolation / Bulkhead
 
 ---
 
@@ -226,6 +249,12 @@ $$x = 97.8\%$$
 
 ---
 
+![](../common/images/glue.jpg)
+
+# Stickiness - Data Locality
+
+---
+
 # Data Locality
 
 - Session affinity is bad in that a request fails if it does not go back to the same data center.
@@ -237,14 +266,20 @@ $$x = 97.8\%$$
 
 ---
 
-![](../common/images/glue.jpg)
+![fit original] (../common/images/CF_Stickiness.png)
 
-# Stickiness
 
 ---
 
-![fit original] (../common/images/CF_Stickiness.png)
+![](../common/images/homer.jpg)
 
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+# [fit] Laziness
+### [fit] Eventual Consistency for ALL state interactions
 
 ---
 
@@ -254,6 +289,20 @@ $$x = 97.8\%$$
 - Apps should read local wherever possible, even if they need to write to a remote master.
 - Know your replication delay vs your typical request/response cycle.  What are the odds that you can route a customer to a new zone before their data gets replicated?
 - Journaling enables playback at a later time in case of System of Record failure.
+
+^ State breaks everything.  Identify boundaries of tolerable failure even for data.  Bake them into your infrastructure and application architectures.
+
+^ Read the S3 Dynamo DB paper
+
+---
+
+# Resilience
+### Restoration within the bounds of the request wins the customer.
+
+![original](../common/images/firestunt2.jpg)
+
+^ image of a fire suit
+^ Self healing infrastructure is really high.  Routing around failure when you have defined the right abstractions is way easier.
 
 ---
 
@@ -292,6 +341,8 @@ $$x = 97.8\%$$
 
 [^1]: [On Designing and Deploying Internet-Scale Services, James Hamilton] (https://www.usenix.org/legacy/event/lisa07/tech/full_papers/hamilton/hamilton_html/)
 
+^ can we show cascading failure image
+
 ---
 
 # Release management
@@ -328,3 +379,6 @@ Deployadactyl is a Go library for deploying applications to multiple Cloud Found
 
 [Star us on Github] (https://github.com/compozed/deployadactyl)
 
+---
+
+# [fit] DEMO / Q&A

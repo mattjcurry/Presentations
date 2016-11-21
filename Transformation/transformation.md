@@ -1,6 +1,7 @@
 footer: © Matt Curry, 2015
 slidenumbers: true
 autoscale: true 
+theme: Business Class, 1
 
 ![right 80%](../common/images/mattjcurry.jpg)
 
