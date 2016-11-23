@@ -63,3 +63,11 @@ AllState Infrastructure Services
 ---
 
 > Many hands make for light work.
+
+---
+
+> If you keep making that face, it will freeze that way.
+
+---
+
+> If you don't stop, I'll turn this car around

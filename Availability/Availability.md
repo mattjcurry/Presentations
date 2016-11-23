@@ -1,6 +1,7 @@
 autoscale: true
 footer: © Matt Curry, 2016
 slidenumbers: true
+autoscale: true
 theme: Letters from Sweden, 1
 
 ![fit] (../common/images/this_is_fine.jpg)
@@ -155,7 +156,6 @@ If you only read one paper on IT operations at scale, this is the one you should
 in the middle of the night, automation is the likely
 outcome. If operations is frequently called, the
 usual reaction is to grow the operations team.
-
 -- James Hamilton
 
 ^ The software developers must feel the pain of the outage.
@@ -168,6 +168,23 @@ usual reaction is to grow the operations team.
 ## Google Architect
 
 [Building Software Systems at Google and Lessons Learned] (http://static.googleusercontent.com/media/research.google.com/en//people/jeff/Stanford-DL-Nov-2010.pdf)
+
+---
+
+## Typical first year for a new cluster at Google:
+- 1 network rewiring (rolling ~5% of machines down over 2-day span)
+- 20 rack failures (40-80 machines instantly disappear, 1-6 hours to get back)
+- 5 racks go wonky (40-80 machines see 50% packetloss)
+- 8 network maintenances (4 might cause ~30-minute random connectivity losses)
+- 12 router reloads (takes out DNS and external vips for a couple minutes)
+- 3 router failures (have to immediately pull traffic for an hour)
+- dozens of minor 30-second blips for dns
+- 1000 individual machine failures
+- thousands of hard drive failures
+- slow disks, bad memory, misconfigured machines, flaky machines, etc.
+- Long distance links: wild dogs, sharks, dead horses, drunken hunters, etc.
+
+# [fit] __*Reliability/availability*__ __**must**__ __*come from software!*__
 
 ---
 
@@ -185,7 +202,7 @@ No, we didn't light it, but we tried to fight it
 
 ---
 
-![fit original] (../common/images/tirefire.jpg)
+![fit ] (../common/images/tirefire.jpg)
 
 # Availability Zone Limitations on PCF
 
